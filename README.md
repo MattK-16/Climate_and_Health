@@ -5,7 +5,4 @@ Gibhub repo for sharing code, data, and metadata for project linking environment
 This will become a public repo facilitating code sharing with those interested in conducting similar research 
 
 #
-Repo will be updated and maintained by Rebekah McKinnon
-
-
-Contact ramckinn@ualberta.ca for more info 
+Forked from RebekahMcKinnon/Climate_and_Health

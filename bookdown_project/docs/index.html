@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Linking Climate and Health Data</title>
   <meta name="description" content="A bookdown template linking to our GitHub project. EDIT THIS LATER" />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Linking Climate and Health Data" />
   <meta property="og:type" content="book" />
@@ -30,7 +30,7 @@
   
   
 
-<link rel="next" href="getting-started.html"/>
+<link rel="next" href="01-introduction.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,9 +51,35 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<script src="libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
+<script src="libs/HomeButton-0.0.1/home-button.js"></script>
+<script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script>
+<link href="libs/Hospitals-CSS-0.0.1/Hospitals_home-button.css" rel="stylesheet" />
+<script src="libs/clipboard-0.0.1/setClipboardText.js"></script>
+<link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet" />
+<link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet" />
+<link href="libs/Intersecting_Fires-CSS-0.0.1/Intersecting_Fires_home-button.css" rel="stylesheet" />
+<link href="libs/Hospital_Location-CSS-0.0.1/Hospital_Location_home-button.css" rel="stylesheet" />
+<link href="libs/Hospital_Buffer__25km_-CSS-0.0.1/Hospital_Buffer__25km__home-button.css" rel="stylesheet" />
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/Intersecting_Floods-CSS-0.0.1/Intersecting_Floods_home-button.css" rel="stylesheet" />
+<link href="libs/Intersecting_Hurricane__Michael_-CSS-0.0.1/Intersecting_Hurricane__Michael__home-button.css" rel="stylesheet" />
+<link href="libs/Closest_Station-CSS-0.0.1/Closest_Station_home-button.css" rel="stylesheet" />
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -123,6 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -135,37 +162,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#purpose"><i class="fa fa-check"></i><b>1.1.1</b> Purpose</a></li>
-</ul></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#purpose"><i class="fa fa-check"></i><b>1.1</b> Purpose</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#required-information"><i class="fa fa-check"></i><b>1.2</b> Required Information</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#datasets"><i class="fa fa-check"></i><b>1.2.1</b> Datasets</a></li>
 <li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#r-packages"><i class="fa fa-check"></i><b>1.2.2</b> R packages</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started with Spatial Data</a>
+<li class="chapter" data-level="2" data-path="01-introduction.html"><a href="01-introduction.html"><i class="fa fa-check"></i><b>2</b> Case Study</a></li>
+<li class="chapter" data-level="3" data-path="02-wildfires.html"><a href="02-wildfires.html"><i class="fa fa-check"></i><b>3</b> Wildfires</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#data-access"><i class="fa fa-check"></i><b>2.1</b> Data Access</a></li>
-<li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#data-preparation"><i class="fa fa-check"></i><b>2.2</b> Data preparation</a>
+<li class="chapter" data-level="3.1" data-path="02-wildfires.html"><a href="02-wildfires.html#fire-data-preparation"><i class="fa fa-check"></i><b>3.1</b> Environmental Data Preparation</a></li>
+<li class="chapter" data-level="3.2" data-path="02-wildfires.html"><a href="02-wildfires.html#fire-intersections"><i class="fa fa-check"></i><b>3.2</b> Compute Intersections</a></li>
+<li class="chapter" data-level="3.3" data-path="02-wildfires.html"><a href="02-wildfires.html#fire-date-lag"><i class="fa fa-check"></i><b>3.3</b> Date Lag</a></li>
+<li class="chapter" data-level="3.4" data-path="02-wildfires.html"><a href="02-wildfires.html#fire-summary-matrix"><i class="fa fa-check"></i><b>3.4</b> Binary Matrix</a></li>
+<li class="chapter" data-level="3.5" data-path="02-wildfires.html"><a href="02-wildfires.html#fire-map"><i class="fa fa-check"></i><b>3.5</b> Map</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="03-floods.html"><a href="03-floods.html"><i class="fa fa-check"></i><b>4</b> Floods</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="getting-started.html"><a href="getting-started.html#terminology"><i class="fa fa-check"></i><b>2.2.1</b> Terminology</a></li>
-<li class="chapter" data-level="2.2.2" data-path="getting-started.html"><a href="getting-started.html#coordinate-reference-systems-and-projections"><i class="fa fa-check"></i><b>2.2.2</b> Coordinate Reference Systems &amp; Projections</a></li>
+<li class="chapter" data-level="4.1" data-path="03-floods.html"><a href="03-floods.html#floods-data-preparation"><i class="fa fa-check"></i><b>4.1</b> Environmental Data Preparation</a></li>
+<li class="chapter" data-level="4.2" data-path="03-floods.html"><a href="03-floods.html#floods-data-cleaning"><i class="fa fa-check"></i><b>4.2</b> Data Preparation</a></li>
+<li class="chapter" data-level="4.3" data-path="03-floods.html"><a href="03-floods.html#floods-data-manipulation"><i class="fa fa-check"></i><b>4.3</b> Compute Intersections</a></li>
+<li class="chapter" data-level="4.4" data-path="03-floods.html"><a href="03-floods.html#floods-map"><i class="fa fa-check"></i><b>4.4</b> Map</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="spatial-data.html"><a href="spatial-data.html"><i class="fa fa-check"></i><b>3</b> Spatial Data</a></li>
-<li class="chapter" data-level="4" data-path="locating-and-refining-environmental-data.html"><a href="locating-and-refining-environmental-data.html"><i class="fa fa-check"></i><b>4</b> Locating &amp; Refining Environmental Data</a>
+<li class="chapter" data-level="5" data-path="04-hurricanes.html"><a href="04-hurricanes.html"><i class="fa fa-check"></i><b>5</b> Hurricanes</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
-<li class="chapter" data-level="4.2" data-path="locating-and-refining-environmental-data.html"><a href="locating-and-refining-environmental-data.html#wildfires"><i class="fa fa-check"></i><b>4.2</b> Wildfires</a>
+<li class="chapter" data-level="5.1" data-path="04-hurricanes.html"><a href="04-hurricanes.html#hurricanes-data-retreival"><i class="fa fa-check"></i><b>5.1</b> Environmental Data Retreival</a></li>
+<li class="chapter" data-level="5.2" data-path="04-hurricanes.html"><a href="04-hurricanes.html#hurricanes-data-preparation"><i class="fa fa-check"></i><b>5.2</b> Data Preparation</a></li>
+<li class="chapter" data-level="5.3" data-path="04-hurricanes.html"><a href="04-hurricanes.html#hurricanes-intersections"><i class="fa fa-check"></i><b>5.3</b> Compute Intersections</a></li>
+<li class="chapter" data-level="5.4" data-path="04-hurricanes.html"><a href="04-hurricanes.html#hurricanes-map"><i class="fa fa-check"></i><b>5.4</b> Map</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="05-heat.html"><a href="05-heat.html"><i class="fa fa-check"></i><b>6</b> Heat</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="locating-and-refining-environmental-data.html"><a href="locating-and-refining-environmental-data.html#data-preparation-with-sf-package"><i class="fa fa-check"></i><b>4.2.1</b> Data preparation with sf package</a></li>
-<li class="chapter" data-level="4.2.2" data-path="locating-and-refining-environmental-data.html"><a href="locating-and-refining-environmental-data.html#inspect-and-refine-data-structure"><i class="fa fa-check"></i><b>4.2.2</b> Inspect &amp; refine data structure</a></li>
+<li class="chapter" data-level="6.1" data-path="05-heat.html"><a href="05-heat.html#heat-data-preparation"><i class="fa fa-check"></i><b>6.1</b> Environmental Data Preparation</a></li>
+<li class="chapter" data-level="6.2" data-path="05-heat.html"><a href="05-heat.html#heat-daily-eccc"><i class="fa fa-check"></i><b>6.2</b> Heat ECCC</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="05-heat.html"><a href="05-heat.html#heat-eccc-date-lag"><i class="fa fa-check"></i><b>6.2.1</b> Date Lag</a></li>
+<li class="chapter" data-level="6.2.2" data-path="05-heat.html"><a href="05-heat.html#heat-eccc-date-join"><i class="fa fa-check"></i><b>6.2.2</b> Date Join</a></li>
+<li class="chapter" data-level="6.2.3" data-path="05-heat.html"><a href="05-heat.html#heat-matrix-eccc"><i class="fa fa-check"></i><b>6.2.3</b> Matrix</a></li>
 </ul></li>
+<li class="chapter" data-level="6.3" data-path="05-heat.html"><a href="05-heat.html#heat-daily-arb"><i class="fa fa-check"></i><b>6.3</b> Heat Days</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="05-heat.html"><a href="05-heat.html#heat-arb-date-lag"><i class="fa fa-check"></i><b>6.3.1</b> Date Lag</a></li>
+<li class="chapter" data-level="6.3.2" data-path="05-heat.html"><a href="05-heat.html#heat-arb-date-join"><i class="fa fa-check"></i><b>6.3.2</b> Date Join</a></li>
+<li class="chapter" data-level="6.3.3" data-path="05-heat.html"><a href="05-heat.html#heat-arb-matrix"><i class="fa fa-check"></i><b>6.3.3</b> Matrix</a></li>
 </ul></li>
+<li class="chapter" data-level="6.4" data-path="05-heat.html"><a href="05-heat.html#heat-map"><i class="fa fa-check"></i><b>6.4</b> Map</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="06-pm_25.html"><a href="06-pm_25.html"><i class="fa fa-check"></i><b>7</b> PM 2.5</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="06-pm_25.html"><a href="06-pm_25.html#pm25-data-preparation"><i class="fa fa-check"></i><b>7.1</b> Environmental Data Preparation</a></li>
+<li class="chapter" data-level="7.2" data-path="06-pm_25.html"><a href="06-pm_25.html#pm25-date-lag"><i class="fa fa-check"></i><b>7.2</b> Date Lag</a></li>
+<li class="chapter" data-level="7.3" data-path="06-pm_25.html"><a href="06-pm_25.html#pm25-data-manipulation"><i class="fa fa-check"></i><b>7.3</b> Data Manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="AA-00-appendix.html"><a href="AA-00-appendix.html"><i class="fa fa-check"></i><b>8</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="AA-00-appendix.html"><a href="AA-00-appendix.html#survey-data-generation"><i class="fa fa-check"></i><b>8.1</b> Survey Data Generation</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="AA-01-references.html"><a href="AA-01-references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
 </ul>
 
       </nav>
@@ -186,24 +242,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Linking Climate and Health Data</h1>
 <p class="author"><em>HEYA Research Group</em></p>
+<p class="date"><em>Last updated: 2026-10-16 12:01</em></p>
 </div>
-<div id="preface" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="preface" class="section level1 unlisted unnumbered hasAnchor">
+<h1>About<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This work is supported by current and past members of the <a href="www.heyaresearch.ca">HEYA Research Group</a>:</p>
-<p>Rebekah McKinnon PhD, 
-Ishwar Tiwari PhD, 
-Jayden Chang MSc, 
-Jack McIlraith MSc, 
-Gina Martin PhD</p>
+<p>Rebekah McKinnon PhD,  Ishwar Tiwari PhD,  Jayden Chang MSc,  Jack McIlraith MSc,  Gina Martin PhD</p>
 <p>Welcome to this bookdown project. You can track issues and tasks here:</p>
 <ul>
 <li>GitHub Project Board: <a href="https://github.com/RebekahMcKinnon/Climate_and_Health/projects/1">View on GitHub</a></li>
 </ul>
-<div id="introduction" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="purpose" class="section level3 hasAnchor" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Purpose<a href="index.html#purpose" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><em>Introduction Text</em></p>
+<div id="purpose" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Purpose<a href="index.html#purpose" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The purpose of this project is to replicate analysis done by the HEYA Research Group for natural disasters on points of interest across Canada.</p>
 </div>
 <div id="required-information" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Required Information<a href="index.html#required-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -213,8 +268,8 @@ Gina Martin PhD</p>
 <table>
 <colgroup>
 <col width="31%" />
-<col width="42%" />
-<col width="25%" />
+<col width="41%" />
+<col width="26%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -226,18 +281,28 @@ Gina Martin PhD</p>
 <tbody>
 <tr class="odd">
 <td>Natural Resources Canada (CFS / CWFIS)</td>
-<td>National Burned Area Composite (<strong>NBAC</strong>) wildfire perimeters (1972–2024) (<a href="https://cwfis.cfs.nrcan.gc.ca/datamart/metadata/nbac?utm_source=chatgpt.com" title="NBAC - Canadian Wildland Fire Information System | Metadata">cwfis.cfs.nrcan.gc.ca</a>)</td>
+<td>National Burned Area Composite (<strong>NBAC</strong>) wildfire perimeters (1972–2024) (<a href="https://cwfis.cfs.nrcan.gc.ca/en/catalogue/results/537a1fd0-698e-4a7b-85a1-e02581ae78b2" title="NBAC - Canadian Wildland Fire Information System">cwfis.cfs.nrcan.gc.ca</a>)</td>
 <td>Polygon (vector)</td>
 </tr>
 <tr class="even">
 <td>Natural Resources Canada (EGS)</td>
-<td><strong>Floods in Canada – Archive</strong> (flood extent products) (<a href="https://open.canada.ca/data/en/dataset/74144824-206e-4cea-9fb9-72925a128189?utm_source=chatgpt.com" title="Floods in Canada - Archive - Open Government Portal">open.canada.ca</a>)</td>
+<td><strong>Floods in Canada - Archive</strong> (flood extent products) (<a href="https://open.canada.ca/data/en/dataset/74144824-206e-4cea-9fb9-72925a128189" title="Floods in Canada - Archive - Open Government Portal">open.canada.ca</a>)</td>
 <td>Polygon (vector)</td>
 </tr>
 <tr class="odd">
 <td>Environment and Climate Change Canada</td>
-<td>Historical climate observations &amp; station metadata (<a href="" title="https://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&amp;stationID=%s&amp;Year=%s&amp;Month=1&amp;Day=1&amp;timeframe=2&amp;submit=Download+Data">climate.weather.gc.ca</a>)</td>
-<td>Point + time series</td>
+<td>Historical climate observations &amp; station metadata (<a href="https://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&amp;stationID=XXX&amp;Year=2024&amp;Month=1&amp;Day=1&amp;timeframe=2&amp;submit=Download+Data%22" title="Government of Canada Weather and Climate">climate.weather.gc.ca</a>)</td>
+<td>Point (vector)</td>
+</tr>
+<tr class="even">
+<td>National Oceanic and Atmospheric Administration - National Hurricane Center</td>
+<td>NHC GIS Archive (<a href="https://www.nhc.noaa.gov/gis/archive_besttrack.php?year=" title="NOAA Hurricane Best Tracks">nhc.noaa.gov</a>)</td>
+<td>Point &amp; Polygon (vector)</td>
+</tr>
+<tr class="odd">
+<td>Statistics Canada</td>
+<td>Open Database of Hospital Facilities (<a href="https://open.canada.ca/data/en/dataset/a1bcd4ee-8e57-499b-9c6f-94f6902fdf32" title="Open Canada">open.canada.ca</a>)</td>
+<td>Point (vector)</td>
 </tr>
 </tbody>
 </table>
@@ -259,11 +324,11 @@ Gina Martin PhD</p>
 <tbody>
 <tr class="odd">
 <td>Statistics Canada</td>
-<td>Postal Code Conversion File (<strong>PCCF</strong>) v8B</td>
+<td>Postal Code Conversion File (<strong>PCCF</strong>) v7E</td>
 <td>Licensed</td>
 </tr>
 <tr class="even">
-<td>CANUE (Canadian Urban Environmental Health Research Consortium)</td>
+<td>Canadian Urban Environmental Health Research Consortium (CANUE)</td>
 <td>Local Climate Zones &amp; PM2.5 (smoke) by Postcode</td>
 <td>Request via project creation in CANUE (free)</td>
 </tr>
@@ -276,8 +341,7 @@ Gina Martin PhD</p>
 <p><strong>Data processing and wrangling</strong></p>
 <ul>
 <li><code>dplyr</code></li>
-<li><code>tidyverse</code><br />
-</li>
+<li><code>tidyverse</code></li>
 <li><code>tidyr</code></li>
 <li><code>lubridate</code></li>
 <li><code>data.table</code></li>
@@ -287,16 +351,30 @@ Gina Martin PhD</p>
 <li><code>stringr</code></li>
 <li><code>readxl</code></li>
 <li><code>writexl</code></li>
+<li><code>rvest</code></li>
+<li><code>httr</code></li>
+<li><code>fs</code></li>
+<li><code>tm</code></li>
+<li><code>SnowballC</code></li>
+<li><code>proxy</code></li>
+<li><code>cmdstanr</code></li>
+<li><code>arrow</code></li>
+<li><code>sfarrow</code></li>
+<li><code>dotenv</code></li>
 </ul>
 <p><strong>Data visualization and mapping</strong></p>
 <ul>
 <li><code>ggplot2</code></li>
 <li><code>maps</code></li>
+<li><code>knitr</code></li>
+<li><code>kableExtra</code></li>
+<li><code>terra</code></li>
 </ul>
 <p><strong>Spatial analysis</strong></p>
 <ul>
 <li><code>sf</code></li>
 <li><code>geosphere</code></li>
+<li><code>mapview</code></li>
 </ul>
 <p><strong>Data download</strong></p>
 <ul>
@@ -310,10 +388,10 @@ Gina Martin PhD</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a><span class="co"># Vector of required packages</span></span>
 <span id="cb1-2"><a href="index.html#cb1-2" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb1-3"><a href="index.html#cb1-3" tabindex="-1"></a>  <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;tidyr&quot;</span>, <span class="st">&quot;lubridate&quot;</span>, <span class="st">&quot;data.table&quot;</span>, <span class="st">&quot;tibble&quot;</span>,</span>
-<span id="cb1-4"><a href="index.html#cb1-4" tabindex="-1"></a>  <span class="st">&quot;readr&quot;</span>, <span class="st">&quot;purrr&quot;</span>, <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;readxl&quot;</span>, <span class="st">&quot;writexl&quot;</span>,</span>
-<span id="cb1-5"><a href="index.html#cb1-5" tabindex="-1"></a>  <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;maps&quot;</span>,</span>
-<span id="cb1-6"><a href="index.html#cb1-6" tabindex="-1"></a>  <span class="st">&quot;sf&quot;</span>, <span class="st">&quot;geosphere&quot;</span>,</span>
-<span id="cb1-7"><a href="index.html#cb1-7" tabindex="-1"></a>  <span class="st">&quot;weathercan&quot;</span>, <span class="st">&quot;furrr&quot;</span>, <span class="st">&quot;tidyverse&quot;</span></span>
+<span id="cb1-4"><a href="index.html#cb1-4" tabindex="-1"></a>  <span class="st">&quot;readr&quot;</span>, <span class="st">&quot;purrr&quot;</span>, <span class="st">&quot;furrr&quot;</span>, <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;readxl&quot;</span>, <span class="st">&quot;writexl&quot;</span>,</span>
+<span id="cb1-5"><a href="index.html#cb1-5" tabindex="-1"></a>  <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;maps&quot;</span>, <span class="st">&quot;rvest&quot;</span>, <span class="st">&quot;httr&quot;</span>, <span class="st">&quot;tm&quot;</span>, <span class="st">&quot;SnowballC&quot;</span>, <span class="st">&quot;proxy&quot;</span>, <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb1-6"><a href="index.html#cb1-6" tabindex="-1"></a>  <span class="st">&quot;sf&quot;</span>, <span class="st">&quot;geosphere&quot;</span>, <span class="st">&quot;fs&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;kableExtra&quot;</span>, <span class="st">&quot;arrow&quot;</span>, <span class="st">&quot;sfarrow&quot;</span>,</span>
+<span id="cb1-7"><a href="index.html#cb1-7" tabindex="-1"></a>  <span class="st">&quot;weathercan&quot;</span>, <span class="st">&quot;furrr&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;terra&quot;</span>, <span class="st">&quot;mapview&quot;</span>, <span class="st">&quot;dotenv&quot;</span></span>
 <span id="cb1-8"><a href="index.html#cb1-8" tabindex="-1"></a>)</span>
 <span id="cb1-9"><a href="index.html#cb1-9" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="index.html#cb1-10" tabindex="-1"></a><span class="co"># Install any that are missing</span></span>
@@ -324,73 +402,10 @@ Gina Martin PhD</p>
 <span id="cb1-15"><a href="index.html#cb1-15" tabindex="-1"></a>}</span>
 <span id="cb1-16"><a href="index.html#cb1-16" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="index.html#cb1-17" tabindex="-1"></a><span class="co"># Load all packages</span></span>
-<span id="cb1-18"><a href="index.html#cb1-18" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">lapply</span>(packages, library, <span class="at">character.only =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre><code>## 
-## Attaching package: &#39;lubridate&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     date, intersect, setdiff, union</code></pre>
-<pre><code>## Warning: package &#39;data.table&#39; was built under R version 4.4.3</code></pre>
-<pre><code>## 
-## Attaching package: &#39;data.table&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:lubridate&#39;:
-## 
-##     hour, isoweek, mday, minute, month, quarter, second, wday, week,
-##     yday, year</code></pre>
-<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
-## 
-##     between, first, last</code></pre>
-<pre><code>## 
-## Attaching package: &#39;purrr&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:data.table&#39;:
-## 
-##     transpose</code></pre>
-<pre><code>## Warning: package &#39;readxl&#39; was built under R version 4.4.3</code></pre>
-<pre><code>## Warning: package &#39;writexl&#39; was built under R version 4.4.3</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.4.3</code></pre>
-<pre><code>## 
-## Attaching package: &#39;maps&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:purrr&#39;:
-## 
-##     map</code></pre>
-<pre><code>## Linking to GEOS 3.13.0, GDAL 3.10.1, PROJ 9.5.1; sf_use_s2() is TRUE</code></pre>
-<pre><code>## As of v0.7.2, the `normals` column in `stations()` reflects whether or not there
-## are *any* normals available (not just the most recent).</code></pre>
-<pre><code>## Warning: package &#39;furrr&#39; was built under R version 4.4.3</code></pre>
-<pre><code>## Loading required package: future</code></pre>
-<pre><code>## Warning: package &#39;future&#39; was built under R version 4.4.3</code></pre>
-<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 4.4.3</code></pre>
-<pre><code>## Warning: package &#39;forcats&#39; was built under R version 4.4.3</code></pre>
-<pre><code>## ── Attaching core tidyverse packages ──
-## ✔ forcats 1.0.0</code></pre>
-<pre><code>## ── Conflicts ──────────────────────────
-## ✖ data.table::between() masks dplyr::between()
-## ✖ dplyr::filter()       masks stats::filter()
-## ✖ data.table::first()   masks dplyr::first()
-## ✖ data.table::hour()    masks lubridate::hour()
-## ✖ data.table::isoweek() masks lubridate::isoweek()
-## ✖ dplyr::lag()          masks stats::lag()
-## ✖ data.table::last()    masks dplyr::last()
-## ✖ maps::map()           masks purrr::map()
-## ✖ data.table::mday()    masks lubridate::mday()
-## ✖ data.table::minute()  masks lubridate::minute()
-## ✖ data.table::month()   masks lubridate::month()
-## ✖ data.table::quarter() masks lubridate::quarter()
-## ✖ data.table::second()  masks lubridate::second()
-## ✖ purrr::transpose()    masks data.table::transpose()
-## ✖ data.table::wday()    masks lubridate::wday()
-## ✖ data.table::week()    masks lubridate::week()
-## ✖ data.table::yday()    masks lubridate::yday()
-## ✖ data.table::year()    masks lubridate::year()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<span id="cb1-18"><a href="index.html#cb1-18" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">lapply</span>(packages, library, <span class="at">character.only =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb1-19"><a href="index.html#cb1-19" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="index.html#cb1-20" tabindex="-1"></a><span class="co">#configure mapview to use public imagery</span></span>
+<span id="cb1-21"><a href="index.html#cb1-21" tabindex="-1"></a><span class="fu">mapviewOptions</span>(<span class="at">basemaps =</span> <span class="fu">c</span>(<span class="st">&quot;Esri.WorldGrayCanvas&quot;</span>))</span></code></pre></div>
 
 </div>
 </div>
@@ -401,7 +416,7 @@ Gina Martin PhD</p>
         </div>
       </div>
 
-<a href="getting-started.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="01-introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -415,42 +430,42 @@ Gina Martin PhD</p>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>
